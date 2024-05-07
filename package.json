@@ -1,0 +1,22 @@
+{
+  "name": "demoqa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nelaserodino/DemoQA_Cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nelaserodino/DemoQA_Cypress/issues"
+  },
+  "homepage": "https://github.com/Nelaserodino/DemoQA_Cypress#readme",
+  "devDependencies": {
+    "cypress": "^13.8.1"
+  }
+}
