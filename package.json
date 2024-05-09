@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/Nelaserodino/DemoQA_Cypress#readme",
   "devDependencies": {
-    "cypress": "^13.8.1"
+    "cypress": "^13.8.1",
+    "@faker-js/faker": "8.4.0",
+    "@typescript-eslint/eslint-plugin": "6.20.0",
+		"@typescript-eslint/parser": "6.20.0",
+    "eslint": "8.56.0",
+    "prettier": "3.2.4",
+		"typescript": "5.3.3"
   }
 }
