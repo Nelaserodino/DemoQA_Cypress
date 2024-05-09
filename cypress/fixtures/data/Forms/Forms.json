@@ -1,0 +1,6 @@
+{
+    "url":"/automation-practice-form",
+    "urlContains":"/automation-practice",
+    "image": "Typescript_logo.png",
+    "successMessage":"Thanks for submitting the form"
+}
