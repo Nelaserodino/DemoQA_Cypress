@@ -12,6 +12,18 @@
         "newPassword": "Testing1",
         "wrongCurrentPassword": "Admin123",
         "wrongPassLessThan7": "test1",
-        "wrongPassMoreThan64":"typexP8Wz2mQ5k7LrN4vD1T3aV9eB6sYjF2mH8cJ5dR0pW7tX4kQ9nL3wZ6yFaaaa"
+        "wrongPassMoreThan64":"typexP8Wz2mQ5k7LrN4vD1T3aV9eB6sYjF2mH8cJ5dR0pW7tX4kQ9nL3wZ6yFaaaa",
+        "wrongPassNoNumber": "testing",
+        "wrongNoLowerCase": "TESTING"
+    }, 
+    "messages": {
+        "toastSuccess": "Successfully Saved",
+        "toastError": "Current Password is Incorrect",
+        "lessThan7Characters": "Should have at least 7 characters",
+        "moreThan64Characters": "Should not exceed 64 characters",
+        "noNumber": "Your password must contain minimum 1 number",
+        "emptyField": "Required",
+        "notMatchingPassword": "Passwords do not match",
+        "noLowerCase": "Your password must contain minimum 1 lower-case letter"
     }
 }
