@@ -1,0 +1,17 @@
+{
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    "loginEndpoint": "login",
+    "dashboardEndpoint": "dashboard",
+    "changePasswordEndpoint": "updatePassword",
+    "PIMEndpoint": "pim",
+    "login": {
+        "username": "Admin",
+        "password": "admin123"
+    },
+    "changePassword": {
+        "newPassword": "Testing1",
+        "wrongCurrentPassword": "Admin123",
+        "wrongPassLessThan7": "test1",
+        "wrongPassMoreThan64":"typexP8Wz2mQ5k7LrN4vD1T3aV9eB6sYjF2mH8cJ5dR0pW7tX4kQ9nL3wZ6yFaaaa"
+    }
+}
