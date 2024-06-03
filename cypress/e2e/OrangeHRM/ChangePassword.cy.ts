@@ -39,7 +39,7 @@ describe('OrangeHRM | Admin | Change Password', () => {
         ChangePasswordPage.fillOutChangePasswordForm(data.login.password, data.changePassword.newPassword, data.changePassword.wrongNoLowerCase);
         ChangePasswordPage.get.errorMessage().should('be.visible').and('have.text', data.messages.notMatchingPassword);
      });
-     it.only('TC7: Verify that an error message is visible when the password does not exist', () => {
+     it('TC7: Verify that an error message is visible when the password does not exist', () => {
         ChangePasswordPage.fillOutChangePasswordForm(data.login.username, data.changePassword.newPassword, data.changePassword.newPassword);
         ChangePasswordPage.clickSaveButton();
         ChangePasswordPage.get.toastMessage().should('be.visible').and('have.text', data.messages.toastError);

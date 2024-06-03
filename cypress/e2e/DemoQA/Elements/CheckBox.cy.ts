@@ -2,19 +2,19 @@
 import { checkboxPage } from '../../../support/pages/Elements/Checkbox.page';
 import data from '../../../fixtures/data/Elements/Checkbox.json';
 
-describe('GX3-3241 | ToolsQA | Elements | Checkbox', () => {
+describe('ToolsQA | Elements | Checkbox', () => {
 
 	beforeEach('Precon: Go to DemoQA webpage', () => {
 		cy.visit(`${data.checkoxEndpoint}`);
 		cy.url().should('contain', data.checkoxEndpoint);
 	});
-	it('GX3-3242 | TC1 | Verify that the user can expand all folders and then collapse all except "Home"', () => {
+	it('TC1 | Verify that the user can expand all folders and then collapse all except "Home"', () => {
 		checkboxPage.clickExpandAll();
 		checkboxPage.get.folders().should('have.length', data.elementCounts.totalFolders);
 		checkboxPage.clickCollapseAll();
 		checkboxPage.get.folders().should('have.length', data.elementCounts.visibleFoldersAfterCollapse).and('have.text', data.texts.homeFolder);
 	});
-	it('GX3-3242 | TC2 | Verify that all folders are selected when the user clicks the "Home" folder', () => {
+	it('TC2 | Verify that all folders are selected when the user clicks the "Home" folder', () => {
 		checkboxPage.clickExpandAll();
 		cy.contains(data.selectorContainsText, data.texts.homeFolder).click();
 		checkboxPage.fetchFoldersNames(true);
@@ -28,7 +28,7 @@ describe('GX3-3241 | ToolsQA | Elements | Checkbox', () => {
 		});
 		checkboxPage.get.result().should('have.css', 'color', data.colors.textSuccess);
 	});
-	it('GX3-3242 | TC3: Verify that unchecking a parent checkbox(Home folder) unchecks all its child checkboxes', () => {
+	it('TC3: Verify that unchecking a parent checkbox(Home folder) unchecks all its child checkboxes', () => {
 		checkboxPage.clickExpandAll();
 		cy.contains(data.selectorContainsText, data.texts.homeFolder).click();
 		checkboxPage.get.folders().should('have.length', data.elementCounts.totalFolders);
@@ -37,7 +37,7 @@ describe('GX3-3241 | ToolsQA | Elements | Checkbox', () => {
 		checkboxPage.get.checkedElement().should('not.exist');
 		checkboxPage.get.result().should('not.exist');
 	});
-	it('GX3-3242 | TC4: Verify that the user can select a random checkbox', () => {
+	it('TC4: Verify that the user can select a random checkbox', () => {
 		checkboxPage.clickExpandAll();
 		checkboxPage.selectRandomCheckbox();
 		checkboxPage.fetchFoldersNames(false);

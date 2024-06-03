@@ -16,7 +16,7 @@ describe('ToolsQA | Forms | Practice Form', () => {
 		cy.visit(FormData.url);
 		cy.url().should('include', FormData.urlContains);
 	});
-	it('2223 | TC1: Check that the user can fill in the form with correct data', () => {
+	it('TC1: Check that the user can fill in the form with correct data', () => {
 		//Type inputs
 		formPage.completeInputs(data.firstName, data.lastName, data.email, data.phoneNumber, data.subjects, data.address);
 		formPage.get.firstName().should('have.value', data.firstName);

@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-03T10:24:42.021Z",
+    "end": "2024-06-03T10:24:47.768Z",
+    "duration": 5747,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5f8b05bf-afb4-4e7d-a502-cfb999f4e26a",
+      "title": "",
+      "fullFile": "cypress/e2e/DemoQA/Elements/CheckBox.cy.ts",
+      "file": "cypress/e2e/DemoQA/Elements/CheckBox.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3012382a-6283-4d98-b6af-843f6d9847d4",
+          "title": "ToolsQA | Elements | Checkbox",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC1 | Verify that the user can expand all folders and then collapse all except \"Home\"",
+              "fullTitle": "ToolsQA | Elements | Checkbox TC1 | Verify that the user can expand all folders and then collapse all except \"Home\"",
+              "timedOut": null,
+              "duration": 2003,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.clickExpandAll();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.folders().should('have.length', _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.elementCounts.totalFolders);\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.clickCollapseAll();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.folders().should('have.length', _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.elementCounts.visibleFoldersAfterCollapse).and('have.text', _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.texts.homeFolder);",
+              "err": {},
+              "uuid": "f9d2d608-11b1-4796-a6b8-98ec68d3afd2",
+              "parentUUID": "3012382a-6283-4d98-b6af-843f6d9847d4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC2 | Verify that all folders are selected when the user clicks the \"Home\" folder",
+              "fullTitle": "ToolsQA | Elements | Checkbox TC2 | Verify that all folders are selected when the user clicks the \"Home\" folder",
+              "timedOut": null,
+              "duration": 891,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.clickExpandAll();\ncy.contains(_fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.selectorContainsText, _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.texts.homeFolder).click();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.fetchFoldersNames(true);\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.getResultsNames();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.getAlias('@resultNames').then((resultNames) => {\n    _support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.getAlias('@allFoldersNames').then((folderNames) => {\n        resultNames.forEach((resultName) => {\n            expect(folderNames).to.include(resultName);\n        });\n    });\n});\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.result().should('have.css', 'color', _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.colors.textSuccess);",
+              "err": {},
+              "uuid": "9375c9fe-ff25-4a76-94bd-7eafbff8dff2",
+              "parentUUID": "3012382a-6283-4d98-b6af-843f6d9847d4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC3: Verify that unchecking a parent checkbox(Home folder) unchecks all its child checkboxes",
+              "fullTitle": "ToolsQA | Elements | Checkbox TC3: Verify that unchecking a parent checkbox(Home folder) unchecks all its child checkboxes",
+              "timedOut": null,
+              "duration": 1015,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.clickExpandAll();\ncy.contains(_fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.selectorContainsText, _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.texts.homeFolder).click();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.folders().should('have.length', _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.elementCounts.totalFolders);\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.checkedElement().should('have.length', _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.elementCounts.totalFolders);\ncy.contains(_fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.selectorContainsText, _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.texts.homeFolder).click();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.checkedElement().should('not.exist');\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.result().should('not.exist');",
+              "err": {},
+              "uuid": "f037a24b-e921-40b2-95c5-6c7361cb8c40",
+              "parentUUID": "3012382a-6283-4d98-b6af-843f6d9847d4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC4: Verify that the user can select a random checkbox",
+              "fullTitle": "ToolsQA | Elements | Checkbox TC4: Verify that the user can select a random checkbox",
+              "timedOut": null,
+              "duration": 1103,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.clickExpandAll();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.selectRandomCheckbox();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.fetchFoldersNames(false);\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.getResultsNames();\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.getAlias('@resultNames').then((resultNames) => {\n    _support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.getAlias('@randomFolderNames').then((randomFolderNames) => {\n        resultNames.forEach((resultName) => {\n            expect(randomFolderNames).to.include(resultName);\n        });\n    });\n});\n_support_pages_Elements_Checkbox_page__WEBPACK_IMPORTED_MODULE_0__.checkboxPage.get.result().should('have.css', 'color', _fixtures_data_Elements_Checkbox_json__WEBPACK_IMPORTED_MODULE_1__.colors.textSuccess);",
+              "err": {},
+              "uuid": "45ea7d2c-e2e0-41e0-b749-ae1ebac331bc",
+              "parentUUID": "3012382a-6283-4d98-b6af-843f6d9847d4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9d2d608-11b1-4796-a6b8-98ec68d3afd2",
+            "9375c9fe-ff25-4a76-94bd-7eafbff8dff2",
+            "f037a24b-e921-40b2-95c5-6c7361cb8c40",
+            "45ea7d2c-e2e0-41e0-b749-ae1ebac331bc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5012,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
