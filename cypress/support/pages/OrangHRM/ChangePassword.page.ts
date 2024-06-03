@@ -8,7 +8,7 @@ class ChangePassword {
         saveButton: () => Cypress.Chainable<JQuery<HTMLElement>>;
         cancelButton: () => Cypress.Chainable<JQuery<HTMLElement>>;
         errorMessage: () => Cypress.Chainable<JQuery<HTMLElement>>;
-        successMessage: () => Cypress.Chainable<JQuery<HTMLElement>>
+        toastMessage: () => Cypress.Chainable<JQuery<HTMLElement>>
     } = {
         userDropdownMenu: () => cy.get('.oxd-userdropdown-name'),
         changePasswordButton: () => cy.get('a:contains("Change Password")'),
@@ -18,7 +18,7 @@ class ChangePassword {
         saveButton: () => cy.get('[type=submit').contains('Save'),
         cancelButton: () => cy.get('[type=button]').contains('Cancel'),
         errorMessage: () => cy.get('.oxd-input-field-error-message'),
-        successMessage: () => cy.get('.oxd-text--toast-message')
+        toastMessage: () => cy.get('.oxd-text--toast-message')
     }
     openUserDropdownMenu(): void {
         this.get.userDropdownMenu().click();
